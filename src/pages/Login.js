@@ -13,13 +13,14 @@ import {Link} from 'react-router-dom'
 import Logo from '../coffee 1.png'
 import Google from '../png/google-logo-png-suite-everything-you-need-know-about-google-newest-0 2.png'
 import { useState } from 'react'
+import {useHistory} from 'react-router-dom'
 
 
 
 
 const Login = () => {
 
-    const [data, setData] = useState({
+    const [users, setData] = useState({
         email: "",
         pass: ""
     })
@@ -30,27 +31,28 @@ const Login = () => {
 
     const insertemail = (e) => {
         setData({
-            ...data,
+            ...users,
             email: e.target.value
           })
     }
 
     const insertpass = (e) => {
         setData({
-            ...data,
+            ...users,
             pass: e.target.value
           })
     }
 
+    const history = useHistory();
     const login = (e) => {
         e.preventDefault();
-        if (data.email && data.pass === "admin") {
+        if (users.email && users.pass === "admin") {
             getToken()
             alert("succes")
+            history.push('/Product')
         } else {
-            alert("email/passwordsalah")
+            alert("username/pass salah")
         }
-        console.log(data.pass)
     }
 
     return(
@@ -101,8 +103,6 @@ const Login = () => {
                     </div>
                 </Col>
             </Row>
-
-            
             <Footer />
         </Container>
     )

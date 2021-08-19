@@ -22,7 +22,7 @@ import kim from '../png/Ellipse 175 (2).png'
 const Home = () => {
     return(
         <div className="Home">
-         <Navbar />
+         <Navbar islogin={false}/>
             <div className="Jumbotron">
                 <Row className="Jumbotron2">
                     <Col lg="8"><h1>Start Your Day with Coffee and Good Meals</h1></Col>
@@ -30,11 +30,6 @@ const Home = () => {
                     <Col lg="5"><div className="GetStart">Get started </div></Col>    
                 </Row>
             </div>
-            {/* <Jumbotron fluid="xl" className="Jumbotron">
-                <h1 className="display-3">Start Your Day with Coffee and Good Meals</h1>
-                <p className="lead">We provide high quality beans, good taste, and healthy meals made by love just for you. Start your day with us for a bigger smile!</p>
-                <p className="GetStart">Get started</p>      
-            </Jumbotron> */}
             <div className="Middle"> 
                  <div className="MenuMiddle">
                      <div className="Md" >
@@ -118,7 +113,7 @@ const Home = () => {
                         <CardTitle className="Card-g"><img  src={f3} alt="" /></CardTitle>
                         <CardText><img  src={ceklis2} alt="" />    Wings</CardText>
                         <CardText><img  src={ceklis2} alt="" />    Drum Sticks</CardText>
-                        <CardText><img  src={ceklis2} alt="" />   Mayonaise and Lemon</CardText>
+                        <CardText><img  src={ceklis2} alt="" />    Mayonaise and Lemon</CardText>
                         <CardText><img  src={ceklis2} alt="" />    Hot Fried</CardText>
                         <strong>Rp.10000</strong>
                         <br />

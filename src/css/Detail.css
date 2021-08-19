@@ -19,7 +19,9 @@
 }
 .Card-d-g{
     border-radius: 100%;
-    width: 19em;
+    max-width: 19em;
+    height: 19em;
+    margin-top: 3em;
 }
 .Card-d-n{
     font-family: Poppins;
@@ -177,6 +179,53 @@
 }
 .Card-d-g-k{
     width: 7em;
+    height: 7em;
     border-radius: 100%;
     text-align: start;
+}
+.tmbl-q{
+    border-radius: 100%;
+    background-color: bisque; 
+    width: 2.5em;
+    height: 2.5em;
+    color: #6A4029;
+    border-style: none;
+    font-weight: bolder;
+}
+.tmbl-q:hover{
+    background-color: #E7AA36;
+}
+
+.m-qty{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+.Card-d-n-k{
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: start;
+    font-family: Poppins;
+    padding-left: 1em;
+}
+.Card-d-q-k{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.Card-d-s-k{
+    text-align: start;
+    font-family: Poppins;
+    padding-left: 2.3em;
+}
+.addc3{
+    padding-top: 1.5em;
+    font-size: 2em;
+    font-weight: bolder;
+    background-color: #E7AA36;
+    cursor: pointer;
+}
+.addc3:hover{
+    display: inline-block;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s;
 }

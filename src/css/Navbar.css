@@ -93,6 +93,7 @@
     text-decoration: none;
     background-color: #FFBA33;
     border-radius: 50px;
+    border-style: none;
 }
 .Register:hover{
     color: white;
@@ -101,6 +102,36 @@
 .mr-2{
   display: none;
 }
+.nav-user{
+    display: flex;
+    justify-content: space-around;
+}
+.testss{
+    background-color: #EFEEEE;
+    border-radius: 1em;
+    width: 10em;
+    height: 2em;
+}
+.testss img{
+    margin-top: -0.21em;
+}
+.testss input{
+    padding-left: 1em;
+    width: 8em;
+    margin-top: 0.21em;
+    padding-right: 1em;
+    background-color: transparent;
+    border-style: none;
+    outline:none;
+}
+.chat{
+    cursor: pointer;
+}
+.fprofile{
+    border-radius: 100%;
+    cursor: pointer;
+}
+
 /* iphonex */
 @media screen and (max-width: 375px) {
     .Navbar{
@@ -108,7 +139,7 @@
     }
     .mr-2{
         display: flex;
-        margin-left: 120px;
+        margin-left: 150px;
         margin-top: 5px;
         border: none;
       }
@@ -118,9 +149,12 @@
     .Menu2{
         display: none;
     }
+    .logo{
+        padding-left: 0;
+    }
     .logo .l2 {
         font-size: 15px;
-        padding-left: 10px;
+        padding-left: 1px;
     }
 }
 

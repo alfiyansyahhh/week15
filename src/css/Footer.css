@@ -56,3 +56,18 @@
 .Menu-f ul li:hover{
     color: #6A4029;
 }
+@media screen and (max-width: 375px) {
+    /* .Footer2{
+        width: 100%;
+        padding: 0;
+        padding-top: 5em;
+    }
+    .ket-f{
+        text-align: center;
+    } */
+
+    .ket-f{
+        text-align: center;
+        padding: 0;
+    }
+}

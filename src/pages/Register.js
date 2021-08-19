@@ -12,8 +12,21 @@ import Footer from '../components/Footer'
 import {Link} from 'react-router-dom'
 import Logo from '../coffee 1.png'
 import Google from '../png/google-logo-png-suite-everything-you-need-know-about-google-newest-0 2.png'
+import {useHistory} from 'react-router-dom'
 
 const Register = () => {
+    const getToken = () => {
+        localStorage.setItem("token","qweasd")
+    }
+
+    const history = useHistory();
+    
+    const register = (e) => {
+        e.preventDefault();
+            getToken()
+            history.push('/Product')
+    }
+
     return(
         <Container fluid={true}>  
             <Row>
@@ -33,7 +46,7 @@ const Register = () => {
                     </Row>
                     <div className="Register-i">Register</div>       
                     <div className="Login">
-                        <Form className="FLogin">
+                        <Form onSubmit={register} className="FLogin">
                                 <Col>
                                 <FormGroup className="FormGroup">
                                     <Label>Email Adress :</Label>
@@ -63,7 +76,7 @@ const Register = () => {
                                     />
                                 </FormGroup>
                                 <br />
-                                <button className="B-login">Sign Up</button>
+                                <button type="submit" className="B-login">Sign Up</button>
                                 <button className="B-login-google"><img src={Google} alt="" />        Login with Google</button>
                                 </Col>
                         </Form>

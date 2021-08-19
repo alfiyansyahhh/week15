@@ -1,34 +1,35 @@
 import Navbar from '../components/Navbar'
-import {  Row, Col, Card,  CardTitle, CardText, Container} from 'reactstrap';
+import {  Row, Col} from 'reactstrap';
 import  { numberWithCommas }from "../numberwithcomas";
 import '../css/Detail.css'
 import Footer from '../components/Footer'
-import { useState, createContext, useEffect} from 'react'
+import { useState} from 'react'
 
 const Detail = () => {
 
     const data = localStorage.getItem("cart")
-    const Detailproduct= JSON.parse(data)
+    // const Detailproduct= JSON.parse(data)
 
-    const [data2, setData] = useState({
-        ListProduct: Detailproduct
+    const [Detail, setData] = useState({
+        Detailproduct: JSON.parse(data)
     })
 
-    // const addqty =() =>{
+    // const addQty =() => {
+    //     let Detailproduct2 = {...Detailproduct,qty:1}
     //     setData({
-    //       ...data2,
-    //       List: data2.ListProduct.qty + 1
-    //     })
-    //   }
-    
+    //         ...Detail,
+    //         nama:"ilham"
+    //       })
+    // }
+
     return(
         <div className="detail" fluid={true}>  
             <Row>
-                <Navbar />
+                <Navbar islogin={true} />
                 <Col className="left">
-                    <img className="Card-d-g" src={Detailproduct.picture} alt=""/>
-                    <h3 className="Card-d-n">{Detailproduct.product_name}</h3>
-                    <p className="Card-d-p">Rp. {numberWithCommas(Detailproduct.price)}</p>
+                    <img className="Card-d-g" src={Detail.Detailproduct.picture} alt=""/>
+                    <h3 className="Card-d-n">{Detail.Detailproduct.product_name}</h3>
+                    <p className="Card-d-p">Rp. {numberWithCommas(Detail.Detailproduct.price)}</p>
                     <div className="Tombol-d">
                         <button className="addcart">Add To Cart</button>
                         <button className="askstaff">Ask a Staff</button>
@@ -37,7 +38,7 @@ const Detail = () => {
                 <Col>
                 <div className='Card-detail'>
                     <p className="info-deliv">Delivery only on Monday to friday at  1 - 7 pm</p>
-                    <p className="ket-detail">{Detailproduct.ket}</p>
+                    <p className="ket-detail">{Detail.Detailproduct.ket}</p>
                     <div className="size">
                         <p className="ket-size">Choose a size</p>
                         <div className="size2">
@@ -63,13 +64,17 @@ const Detail = () => {
 
             <div className="addc">
             <Row className="addc2">
-                <Col lg="1"><img className="Card-d-g-k" src={Detailproduct.picture} alt=""/></Col>
-                <Col lg="5"><div>plus</div></Col>    
-                <Col lg="6">
-                    <div>
-                        {data2.ListProduct.qty}
+                <Col lg="2"><img className="Card-d-g-k" src={Detail.Detailproduct.picture} alt=""/></Col>
+                <Col lg="5">
+                    <div className="Card-d-n-k">{Detail.Detailproduct.product_name}</div>
+                    <div className="Card-d-s-k">x1 (Reguler)</div>
+                </Col>    
+                <Col lg="4" className="m-qty">
+                    <button className="tmbl-q">-</button>
+                    <div className="Card-d-q-k">
+                        {Detail.Detailproduct.qty}
                     </div>
-                    <button>add</button>
+                    <button className="tmbl-q">+</button>
                 </Col>    
             </Row>
             <Row className="addc3">

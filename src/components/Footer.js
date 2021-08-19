@@ -7,7 +7,6 @@ import twt from '../png/twt.png'
 import ig from '../png/ig.png'
 const Footer = () => {
     return(
-        <div>
             <div className="Footer">
                 <Row className="Footer2">
                     <Col className="logo-f">
@@ -41,7 +40,6 @@ const Footer = () => {
                     </Col>      
                 </Row>   
             </div>
-        </div>
     )
 }
 

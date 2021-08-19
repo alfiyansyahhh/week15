@@ -286,33 +286,69 @@ margin-left: -40px;
 
 
 /* iphone x */
-/* @media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .Jumbotron{
         width: 375px;
     }
-    .display-3{
-        padding: 40px;
-        width: 350px;
-        font-size: 35px;
+    .Jumbotron2 h1{
+        padding: 0;
+        margin-left: 0;
+        line-height: 30px;
+        margin-top: 3em;
+        width: 10em;
+        text-align: center;
+        font-size: 25px;
     }
-    .lead{
-        width: 305px;
-        margin-top: -20px;
-        margin-left: 35px;
+    .Jumbotron2 p{
+        width: 10em;
+        margin-left: 1em;
+        text-align: center;
     }
     .GetStart{
         width: 200px;
         height: 60px;
-        margin-left: 30px;
+        margin-left: 20px;
         border-radius: 10px;
         padding: 17px;
     }
     .Middle{
-        width: 350px;
-        padding-left: 20px;
-        margin-top: -50px;
+        display: none;
     }
-} */
+    .Sright{
+       display: none;
+    }
+    .Favorite{
+        padding-left: 300px;
+    }
+    .Custumer-card{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        min-width: 900px;
+    }
+    .test3{
+        margin-top: 10px;
+        margin-left: 150px;
+        display: flex;
+    }
+    .test3 img{
+       height: 15px;
+       margin-top: 5px;
+       margin-left: 10px;
+    }
+    .card-f-name{
+        margin-top: -55px;
+        font-size: 10px;
+        line-height: 5px;
+    }
+    .Promo{
+        display: none;
+    }
+    .test{
+        display: none;
+    }
+    
+}
 /* ipadpro */
 /* @media screen and (min-width: 1023px) and (max-width: 1024px) {
     .Jumbotron{
