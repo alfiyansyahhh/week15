@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 https://postimg.cc/vg0kxF1Y
-
+ [![landing-page-dekstop.png](https://i.postimg.cc/d1mXhrch/landing-page-dekstop.png)](https://postimg.cc/9R01S4M2)
+ 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
