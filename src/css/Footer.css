@@ -1,0 +1,58 @@
+.Footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #F8F8F8;
+}
+.Footer2{
+    width: 90%;
+    padding: 90px;
+}
+.logo-f .l{
+    text-decoration: none;
+    margin-left: -100px;
+}
+.logo-f .l2{
+    text-decoration: none;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: black;
+} 
+.ket-f{
+    text-align: start;
+    padding: 30px;
+}
+.sosmed{
+    display: flex;
+    width: 50%;
+    margin-top: -10px;
+    margin-left: 20px;
+    justify-content: space-around;
+}
+.sosmed img{
+    cursor: pointer;
+}
+.sosmed img:hover{
+    background-color: #6A4029;
+    border-radius: 100%;
+}
+
+.Menu-f{
+    display: flex;
+    justify-content: space-around;
+}
+.Menu-f ul li{
+    text-decoration: none;
+    border: none;
+    text-align: start;
+    cursor: pointer;
+    background-color: #F8F8F8;
+
+}   
+
+.Menu-f ul li:hover{
+    color: #6A4029;
+}

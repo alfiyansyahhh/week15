@@ -1,0 +1,104 @@
+.Bg{
+    background-image: url('../png/robert-bye-95vx5QVl9x4-unsplash\ 2\ \(4\).png');
+    height: 100vh;
+    background-size: cover;
+    display: none;
+}
+
+.Nav-Login{
+    padding: 3em;
+}
+.Login-i{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 41px;
+    color: #6A4029;
+    cursor: pointer;
+}
+.Register-i{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 41px;
+    color: #6A4029;
+    cursor: pointer;
+}
+.Login{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.FLogin{
+    width: 50%;
+    justify-content: start;
+    text-align: start;
+    justify-items: center;
+}
+.FLogin .FormGroup{
+    padding-top: 1.5em;
+    
+}
+.FLogin .FormGroup input{
+    background: #FFFFFF;
+    border: 1px solid #4f566562;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 3.5em;
+    padding-left: 1.3em;
+    padding-bottom: 0.6em;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 1px 1px 10px #cccccc;
+}
+.FLogin .FormGroup input:hover{
+    outline-color: none;
+}
+.FLogin .FormGroup label{
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 24px;
+    color: #4F5665;
+}
+.Forgetpass{
+    color: #6A4029;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.B-login{
+    width: 100%;
+    height: 3.5em;
+    background: #FFBA33;
+    box-shadow: 0px 6px 20px rgba(255, 186, 51, 0.4);
+    border-radius: 0.6em;
+    border-style: none;
+    color: #6A4029;
+    font-weight: bolder;
+}
+.B-login:hover{
+    background-color: #6A4029;
+    color: white;
+}
+.B-login-google{
+    width: 100%;
+    height: 3.5em;
+    background: white;
+    box-shadow: 0px 6px 20px rgba(196, 196, 196, 0.67);
+    border-radius: 0.6em;
+    border-style: none;
+    color: black;
+    font-weight: bolder;
+    margin-top: 1em;
+    font-size: 1em;
+}
+.B-login-google:hover{
+    background-color: rgb(250, 248, 248);
+}
+
+@media only screen  and (min-width : 1224px) {
+.Bg{
+    display: flex;
+}
+}
