@@ -51,9 +51,7 @@
     padding-bottom: 0.6em;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 1px 1px 10px #cccccc;
 }
-.FLogin .FormGroup input:hover{
-    outline-color: none;
-}
+
 .FLogin .FormGroup label{
     font-family: Rubik;
     font-style: normal;

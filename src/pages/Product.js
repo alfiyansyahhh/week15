@@ -6,9 +6,9 @@ import  {numberWithCommas }from "../numberwithcomas";
 import '../css/Product.css'
 import "animate.css"
 import Footer from '../components/Footer'
-import {Link} from 'react-router-dom'
-import {useLocation} from 'react-router-dom'
-import {useHistory} from 'react-router-dom'
+import {useLocation, useHistory, Link} from 'react-router-dom'
+import axios from 'axios'
+
 
 
 
@@ -42,175 +42,50 @@ const Product = () => {
             ket:"Do you like chicken wings? Get 1 free only if you buy pinky promise",
             color: "Brown"
         }
-    ]
-    let Product = [
-        {
-            id: 1,
-            picture: 'https://i.postimg.cc/ZqZJ1Sgx/m1.png',
-            product_name:'Veggie tomato mix',
-            price: 34000,
-            category: 'Add-on',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-        },
-        {
-            id: 2,
-            picture: 'https://i.postimg.cc/76tDGTLK/m2.png',
-            product_name:'Hazelnut Latte',
-            price: 25000,
-            category: 'Coffee',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 3,
-            picture: 'https://i.postimg.cc/FzfvjsdN/m3.png',
-            product_name:'Summer fried rice',
-            price: 22000,
-            category: 'Foods',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 4,
-            picture: 'https://i.postimg.cc/sxPm88f0/m8.png',
-            product_name:'Creamy Ice Latte',
-            price: 27000,
-            category: 'Add-on',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 5,
-            picture: 'https://i.postimg.cc/t4GbxbXG/m5.png',
-            product_name:'Drum Sticks',
-            price: 30000,
-            category: 'Foods',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 6,
-            picture: 'https://i.postimg.cc/130Q0dtn/m6.png',
-            product_name:'Salty Rice',
-            price: 20000,
-            category: 'Foods',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 7,
-            picture: 'https://i.postimg.cc/KvmGrxLR/espresso.png',
-            product_name:'Espresso',
-            price: 10000,
-            category: 'Coffee',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 8,
-            picture: 'https://i.postimg.cc/59KYss5B/coffee-latte.png',
-            product_name:'Cofee Latte',
-            price: 15000,
-            category:"coffee",
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 9,
-            picture: 'https://i.postimg.cc/pr52GJxC/cappucino.png',
-            product_name:'Cappucino',
-            price: 5000,
-            category: 'Coffee',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 10,
-            picture: 'https://cashbac.com/blog/wp-content/uploads/2019/04/Kopi-Terenak-Kekinian-di-Jakarta-Red-Velvet-Latte-e1556530040183.jpg',
-            product_name:'Red Velvet Latte',
-            price: 33000,
-            category: 'Add-on',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-    
-        },
-        {
-            id: 11,
-            picture: 'https://i.postimg.cc/5NwHffd3/chocorum.png',
-            product_name:'Choco Rhum',
-            price: 28000,
-            category: 'Add-on',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-        },
-        {
-            id: 12,
-            picture: 'https://i.postimg.cc/pXNhNp7r/blackforest.png',
-            product_name:'Black Forest',
-            price: 30000,
-            category: 'Add-on',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-        },
-        {
-            id: 13,
-            picture: 'https://i.postimg.cc/RZ4WF2vz/chickenkatsu.png',
-            product_name:'Chicken Katsu',
-            price: 60000,
-            category: 'Foods',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-        },
-        {
-            id: 14,
-            picture: 'https://i.postimg.cc/LsshkfqC/salmon.png',
-            product_name:'Salmon Truffle',
-            price: 60000,
-            category: 'Foods',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-        },
-        {
-            id: 15,
-            picture: 'https://i.postimg.cc/bvFrmJkz/wiener.png',
-            product_name:'Wiener Schnitzel',
-            price: 69000,
-            category: 'Foods',
-            ket:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio nunc, dapibus non euismod ut, lobortis id ligula. Nam a hendrerit ligula. Vestibulum sagittis erat leo, in eleifend nibh eleifend in."
-        },
-        {
-            id: 15,
-            picture: 'https://i.postimg.cc/2521hX0K/image-25-1.png',
-            product_name:'Cold Brew',
-            price: 30000,
-            category: 'coffee',
-            ket: "Cold brewing is a method of brewing that combines ground coffee and cool water and uses time instead of heat to extract the flavor. It is brewed in small batches and steeped for as long as 48 hours."
-        }
-    ]
+    ]    
 
     const [data, setData] = useState({
-        product: Product,
-        promo: Promo
+        promo: Promo,
+        product3: [],
     })
+    const API_URL = 'http://18.206.120.211:8000'
+    const token = localStorage.getItem('token')
+    const getproduct = () => {
+        axios.get(`${API_URL}/product`, { headers: { token: token} })
+        .then(function (response) {
+            // handle success
+            setData({...data, product3: response.data.data.data})
+          })
+          .catch(function (error) {
+            // handle error
+            console.log(error);
+          })
+    }
+
+    useEffect(() => {
+       getproduct()
+    }, [])
 
     const history = useHistory();
     const location = useLocation()
     const query = new URLSearchParams(location.search)
     
-    const hasilSearch = query.get("search")
-    console.log(hasilSearch)
+    const hasilSearch = query.get("search")   
     useEffect(() => {
-        if (hasilSearch && hasilSearch !== "") {
-            const productSearch = Product.filter((e) => {
-                if (e.product_name === hasilSearch) {
-                   return e
-                } 
-            })
-            setData({...data,product: productSearch})
-        } else {
-            setData({...data,product: Product})
-        }
-       
-    },[hasilSearch])
-    console.log(data)
-    
-
-   
+        axios.get(`${API_URL}/product?search=${hasilSearch}`, { headers: { token: token} })
+        .then(function (response) {
+            // handle success
+            if (hasilSearch && hasilSearch !== "") {
+                setData({...data, product3: response.data.data.data})
+            } else {
+                getproduct()
+            }
+          })
+          .catch(function (error) {
+            // handle error
+            console.log(error);
+          })         
+    },[hasilSearch]) 
 
     const Detail = (data) => {
         const dataDetail = {...data,qty:1}
@@ -257,22 +132,22 @@ const Product = () => {
                      <p>Non Coffee</p>
                      <p>Foods</p>
                      <p>Add-on</p>
+                     <p><Link className="addp" to='/Add'>Add-Product</Link></p>
                  </div>
-                 <div className="Product">
+                 <div className="Product">                     
                     <Row  className="Product-cards"> 
-                        {data.product.map((e) => {
+                    {data.product3.map((e) => {
                             return(
-                                <Col lg="3" md="3" xs="6" >
-                                    <Card body onClick={() => Detail(e)} className="Card-p">
-                                        <CardTitle className="Card-p-g" ><img src={e.picture} alt="" /></CardTitle>
-                                        <CardText className="Card-p-n">{e.product_name}</CardText>
-                                        <CardText className="Card-p-p"> Rp. {numberWithCommas(e.price)}</CardText>
-                                    </Card>
-                                </Col>
+                            <Col lg="3" md="3" xs="6" >
+                            <Card body onClick={() => Detail(e)} className="Card-p">
+                                <CardTitle className="Card-p-g" ><img src={e.picture} alt="" /></CardTitle>
+                                <CardText className="Card-p-n">{e.product_name}</CardText>
+                                <CardText className="Card-p-p"> Rp. {numberWithCommas(e.price)}</CardText>
+                            </Card>
+                            </Col> 
                             )   
-                        })}
-                    </Row>
-                    
+                         })}       
+                     </Row>        
                  </div>
                 
                 </Col>

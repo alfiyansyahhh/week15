@@ -26,7 +26,7 @@ const Login = () => {
     })
 
     const getToken = () => {
-        localStorage.setItem("token","qweasd")
+        localStorage.setItem("token","123")
     }
 
     const insertemail = (e) => {

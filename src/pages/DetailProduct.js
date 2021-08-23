@@ -4,6 +4,7 @@ import  { numberWithCommas }from "../numberwithcomas";
 import '../css/Detail.css'
 import Footer from '../components/Footer'
 import { useState} from 'react'
+import {useHistory} from 'react-router-dom'
 
 const Detail = () => {
 
@@ -13,14 +14,11 @@ const Detail = () => {
     const [Detail, setData] = useState({
         Detailproduct: JSON.parse(data)
     })
-
-    // const addQty =() => {
-    //     let Detailproduct2 = {...Detailproduct,qty:1}
-    //     setData({
-    //         ...Detail,
-    //         nama:"ilham"
-    //       })
-    // }
+    const history = useHistory();
+    
+    const edit = () => {
+        history.push('/Edit')
+    }
 
     return(
         <div className="detail" fluid={true}>  
@@ -32,7 +30,7 @@ const Detail = () => {
                     <p className="Card-d-p">Rp. {numberWithCommas(Detail.Detailproduct.price)}</p>
                     <div className="Tombol-d">
                         <button className="addcart">Add To Cart</button>
-                        <button className="askstaff">Ask a Staff</button>
+                        <button onClick={edit} className="askstaff">Edit Product</button>
                     </div>
                 </Col>
                 <Col>

@@ -25,40 +25,17 @@ const Navbar1 = (props) => {
         history.push(`/Product?search=${search}`)
     }
 
-    const menu2 = (data) => { 
-        if (data === true) {
-               return(
-                   <div className="nav-user">
-                    <form className="testss" onSubmit={handleSubmit}>
-                        <img src={seacrh} alt=""/>
-                        <input  type="text" onChange={changeSearch} name="search" value={search} />
-                    </form>                       
-                    <div><img className="chat" src={chat} alt=""/></div>
-                    <div><img className="fprofile" src={fprofile} alt=""/></div>
-                   </div>
-               )         
-        } else {
-            return(
-                <div>
-                    <Link className="Loginn-nav" to="/Login"> Login</Link>
-                    <Link to="/Register"> <button className="Register">Sign Up</button></Link>
-                </div>
-            ) 
-        } 
-    }
-
     return(  
     <div className="Navbar">
      <Container fluid={true}> 
         
         <Row>
             <Navbar color="faded" light>
-                <Col lg="3" md="3" xs="12" className="logo">
+                <Col className="logo">
                     <Link className="l" to="/"> <img src={Logo} alt="" /> </Link>
-                    <Link className="l2" to="/"> {props.islogin} Coffee Shop</Link>
+                    <Link className="l2" to="/">Coffee Shop</Link>
                     <div onClick={toggleNavbar} className="mr-2" ><img width="30px" src={Humberger} alt="" /></div>
                 </Col>
-                <Col></Col>
                 <Col lg="6" md="6" xs="12"  className="Menu1">
                     <Link className="M1" to="/"> Home</Link>
                     <Link className="M1" to="/Product"> Product</Link>
@@ -66,7 +43,21 @@ const Navbar1 = (props) => {
                     <Link className="M1" to="/History"> History</Link>
                 </Col>   
                 <Col lg="3" md="3" xs="3" className="Menu2">
-                    {menu2(props.islogin)}
+                    {props.islogin === true?(
+                         <div className="nav-user">
+                         <form className="testss" onSubmit={handleSubmit}>
+                             <img src={seacrh} alt=""/>
+                             <input  type="text" onChange={changeSearch} name="search" value={search} />
+                         </form>                       
+                         <div><img className="chat" src={chat} alt=""/></div>
+                         <div><img className="fprofile" src={fprofile} alt=""/></div>
+                        </div>
+                    ):(
+                        <div>
+                            <Link className="Loginn-nav" to="/Login"> Login</Link>
+                            <Link to="/Register"> <button className="Register">Sign Up</button></Link>
+                        </div>
+                    )}
                 </Col>
 
                 <Collapse isOpen={!collapsed} navbar>

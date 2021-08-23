@@ -231,3 +231,62 @@ justify-content: space-around;
         color: #6A4029;
     }
 }
+
+.f-addproduct {
+    text-align: start;
+}
+.f-addproduct label{
+    padding-top: 20px;
+}
+.f-addproduct input{
+    background: #FFFFFF;
+    border: 1px solid #4f566562;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 3.5em;
+    padding-left: 1.3em;
+    padding-bottom: 0.6em;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 1px 1px 10px #cccccc;
+}
+.submitadd{
+    margin-top: 20px;
+}
+.silang{
+    text-align: end;
+    margin-top: 40px;
+}
+.silang img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.selectcategory{
+    background: #FFFFFF;
+    border: 1px solid #4f566562;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 3em;
+    padding-left: 1.3em;
+    padding-bottom: 0.6em;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 1px 1px 10px #cccccc;
+}
+
+.ketadd{
+    background: #FFFFFF;
+    border: 1px solid #4f566562;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 5.5em;
+    padding-left: 1.3em;
+    padding-bottom: 0.6em;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 1px 1px 10px #cccccc;
+}
+.addp{
+    list-style: none;
+    text-decoration: none;
+    color: #959595;
+}
+.addp:hover{
+    color: #6A4029;
+}
+

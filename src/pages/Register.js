@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import {
     FormGroup,
     Form,
@@ -16,7 +15,7 @@ import {useHistory} from 'react-router-dom'
 
 const Register = () => {
     const getToken = () => {
-        localStorage.setItem("token","qweasd")
+        localStorage.setItem("token","123")
     }
 
     const history = useHistory();

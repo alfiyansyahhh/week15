@@ -6,7 +6,7 @@ return(
  <Route {...rest} 
  render={
     (props) => {
-        if(token === "qweasd"){
+        if(token === "123"){
             return <Component {...props} />
         } else {
             return <Redirect to="/Login" />
